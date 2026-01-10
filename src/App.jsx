@@ -13,7 +13,7 @@ const App = () => {
     getdata()
   },[index])
 
-  let printuserdata = "NO users available"
+  let printuserdata = <h3 className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>Loading...</h3>
 
   if(Userdata.length > 0){
     printuserdata = Userdata.map(function(elem, idx){
@@ -37,9 +37,12 @@ const App = () => {
         <button className='bg-amber-500 font-medium cursor-pointer active:scale-95 text-black py-2 px-5 rounded-2xl' onClick={()=>{
           if(index>1){
             setindex(index-1)
+            setUserdata([])
           }
         }}>Prev</button>
+        <h4>Page {index}</h4>
         <button className='bg-amber-500 font-medium cursor-pointer active:scale-95 text-black py-2 px-5 rounded-2xl' onClick={()=>{
+          setUserdata([])
           setindex(index+1)
         }}>Next</button>
       </div>
