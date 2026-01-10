@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 const App = () => {
   const [Userdata, setUserdata] = useState([])
+  const [index, setindex] = useState(0)
 
   const getdata = async ()=>{
-    const response = await axios.get('https://picsum.photos/v2/list?page=3&limit=30')
+    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=30`)
     setUserdata(response.data)
   }
 
   useEffect(function(){
     getdata()
-  })
+  },[index])
 
   let printuserdata = "NO users available"
 
@@ -31,6 +32,16 @@ const App = () => {
     <div className='bg-black overflow-auto h-screen text-white p-6'>
       <div className='flex flex-wrap gap-4'>
         {printuserdata}
+      </div>
+      <div className='flex justify-center mt-3 items-center gap-4'>
+        <button className='bg-amber-500 font-medium cursor-pointer active:scale-95 text-black py-2 px-5 rounded-2xl' onClick={()=>{
+          if(index>1){
+            setindex(index-1)
+          }
+        }}>Prev</button>
+        <button className='bg-amber-500 font-medium cursor-pointer active:scale-95 text-black py-2 px-5 rounded-2xl' onClick={()=>{
+          setindex(index+1)
+        }}>Next</button>
       </div>
     </div>
   )
