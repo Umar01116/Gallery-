@@ -12,13 +12,13 @@ A simple React gallery app built with React Hooks that fetches image data from a
 
 📦 Technologies Used
 
-React
+React js
 
 JavaScript (ES6+)
 
 Fetch / Axios
 
-TailwindCSS for basic styling
+TailwindCSS for styling
 
 
 Images, API data and React components are organized under src/ for clarity.
@@ -75,3 +75,4 @@ This project is open source and available under the MIT License.
 If you found this useful ⭐️, give it a star!
 
 Happy Coding! 💙
+
