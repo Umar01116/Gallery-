@@ -1,6 +1,6 @@
 Gallery
 
-A simple React gallery app built with React Hooks that fetches image data from an API and displays it as a gallery on the page. This project demonstrates the use of React’s useState and useEffect hooks to fetch and render data dynamically.
+React gallery app built with React Hooks that fetches image data from an API and displays it as a gallery on the page. This project demonstrates the use of React’s useState and useEffect hooks to fetch and render data dynamically.
 
 🚀 Features
 
@@ -75,4 +75,5 @@ This project is open source and available under the MIT License.
 If you found this useful ⭐️, give it a star!
 
 Happy Coding! 💙
+
 
